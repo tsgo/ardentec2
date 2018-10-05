@@ -1,0 +1,42 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+
+@import "_oa";
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
+    @include font-smoothing(antialiased);
+  }
+}
+
+
+$c_orange: rgba(229, 58, 41, 1.00);
+$c_black: rgba(43, 43, 43, 1.00);
+$c_gray: rgba(152, 150, 150, 1.00);
+$c_de_gray: rgba(204, 204, 204, 1.00);
+$c_pink: rgba(229, 58, 41, .5);
+$c_footer: rgba(208, 209, 211, 1.00);
+
+
+.in_title {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: $c_black;
+  text-align: left;
+
+  @include range-width(0, 450px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

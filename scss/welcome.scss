@@ -1,0 +1,274 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+
+@import "_oa";
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
+    @include font-smoothing(antialiased);
+  }
+}
+
+.or {
+  background-color: rgba(228, 70, 61, 1.00);
+}
+
+.bl {
+  background-color: rgba(75, 119, 203, 1.00);
+}
+
+$c_orange: rgba(229, 58, 41, 1.00);
+$c_black: rgba(43, 43, 43, 1.00);
+$c_gray: rgba(152, 150, 150, 1.00);
+$c_de_gray: rgba(204, 204, 204, 1.00);
+$c_pink: rgba(229, 58, 41, .5);
+$c_footer: rgba(208, 209, 211, 1.00);
+
+
+.block01 {
+  display: inline-block;
+  width: 100%;
+  border-top: 5px solid $c_orange;
+  overflow: hidden;
+  background-color: white;
+
+  @include range-width(0, 1200px) {
+    padding: 0 10px;
+  }
+
+  .w_ct {
+    display: inline-block;
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+
+    .wwl {
+      // width: 100%;
+      height: 375px;
+
+      @include range-width(0, 450px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    // img {
+    //   width: 100%;
+    // }
+
+    .w_logo {
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 75px);
+      left: 0;
+      width: 100%;
+      max-width: 307px;
+
+      @include range-width(735px, 990px) {
+        top: calc(50% - 65px);
+      }
+
+      @include range-width(665px, 735px) {
+        top: calc(50% - 59px);
+      }
+
+      @include range-width(520px, 665px) {
+        max-width: 250px;
+        top: calc(50% - 48px);
+      }
+
+      @include range-width(0, 520px) {
+        max-width: 200px;
+        top: calc(50% - 36px);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+.block02 {
+  display: inline-block;
+  width: 100%;
+  background-repeat: repeat-x;
+  padding: 100px 0 55px 0;
+  background-color: rgba(230, 69, 55, 1.00);
+  background-image: url(../img/wo_bg.jpg);
+
+  @include range-width(0, 1200px) {
+    padding: 75px 10px 90px 10px; 
+  }
+
+  &.bg_blue {
+    background-image: url(../img/wb_bg.jpg);
+    background-color: rgba(75, 119, 203, 1.00);
+  }
+
+  .b2_box {
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px;
+    .w01 {
+      display: inline-block;
+      width: 100%;
+      max-width: 1000px;
+      @include clearfix();
+      
+      span {
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 65px;
+
+        @include range-width(0, 450px) {
+          font-size: 25px;
+          margin-bottom: 30px;
+        }
+
+        // &:after {
+        //   display: inline-block;
+        //   content: '';
+        //   width: 90%;
+        //   height: 1px;
+        //   background-color: white;
+        //   margin-top: 10px;
+        // }
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        width: calc(100% / 3 - 3px * 2 / 3);
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 25px;
+        text-align: left;
+        background-color: rgba(255, 255, 255, .1);
+        color: white;
+        @include transition(all .3s);
+
+        @include range-width(0, 750px) {
+          width: 100%;
+          margin-top: 5px;
+        }
+        
+        &:after {
+          display: inline-block;
+          content: '\e904';
+          font-family: icomoon;
+          float: right;
+          margin-right: 10px;
+          font-size: 20px;
+        }
+
+        &:nth-child(2) {
+          margin: 0 3px;
+
+          @include range-width(0, 750px) {
+            margin: 5px 0 0 0;
+          }
+        }
+
+        &:hover, &:active {
+          background-color: rgba(255, 255, 255, 1);
+          color: $c_black;
+        }
+
+        &.w50 {
+          width: calc(100% / 2 - 55px * 1 / 2);
+          height: auto;
+          padding: 25px 0 25px 25px;
+          line-height: 26px;
+
+          @include range-width(0, 750px) {
+            width: 100%;
+            padding: 10px 0 10px 10px;
+          }
+
+          &:last-child {
+            margin: 0 0 0 55px;
+
+            @include range-width(0, 750px) {
+              margin: 5px 0 0 0;
+            }
+          }
+
+          p {
+            display: inline-block;
+            width: calc(100% - 30px);
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.block03 {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(230, 69, 55, 1.00);
+
+  &.bblock {
+    background-color: rgba(75, 119, 203, 1.00);
+  }
+
+  .w_fboxs {
+    display: inline-block;
+    width: 100%;
+    max-width: 1300px;
+    padding: 35px 0;
+    text-align: right;
+    font-size: 12px;
+    color: white;
+
+    @include range-width(0, 1200px) {
+      padding: 15px 10px;
+    }
+
+    @include range-width(450px, 750px) {
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @include range-width(0, 450px) {
+      display: none;
+    }
+
+    &.m_w_fboxs {
+      display: none;
+      text-align: center;
+
+      @include range-width(0, 450px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
